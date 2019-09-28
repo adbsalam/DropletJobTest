@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registerActivity.Register">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC000000"
+        android:alpha="0.7"
+        android:id="@+id/busy_layout">
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_Fullname"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:inputType="textPersonName"
+        android:hint="@string/full_name"
+        android:autofillHints="@string/FULLNAME_R" />
+
+    <EditText
+        android:id="@+id/et_CurrentLocation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:inputType="text"
+        android:hint="@string/current_location"
+        android:layout_below="@id/et_Fullname"
+        android:autofillHints="@string/CUR_ADR_R" />
+
+    <EditText
+        android:id="@+id/et_about"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:inputType="textMultiLine"
+        android:maxLines="4"
+        android:hint="@string/about_you"
+        android:layout_below="@id/et_CurrentLocation"
+        android:autofillHints="@string/about_you" />
+
+    <EditText
+        android:id="@+id/et_Email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:inputType="textEmailAddress"
+        android:hint="@string/email"
+        android:layout_below="@id/et_about"
+        android:autofillHints="@string/e_M" />
+
+    <EditText
+        android:id="@+id/et_Password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:hint="@string/password"
+        android:layout_below="@id/et_Email"
+        android:autofillHints="password" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/submit"
+        android:textColor="#ffff"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/et_Password"
+        android:background="@drawable/shape"
+        />
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/progress_circular_register"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wait_please"
+        android:layout_above="@id/progress_circular_register"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tv_wait"/>
+
+
+
+
+</RelativeLayout>

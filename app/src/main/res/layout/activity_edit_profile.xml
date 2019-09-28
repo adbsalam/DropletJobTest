@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".homeScreenActivity.EditProfile">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/crd_profile_dp_editMode"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="6dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/side_nav_bar">
+                <ImageView
+                    android:id="@+id/img_profile_dp_editMode"
+                    android:layout_width="120dp"
+                    android:layout_centerInParent="true"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="30dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher"
+                    android:contentDescription="@string/profile_dp_card" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/click_msg"
+                    android:layout_below="@+id/img_profile_dp_editMode"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <EditText
+            android:id="@+id/et_Fullname_EditMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/crd_profile_dp_editMode"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:layout_marginTop="40dp"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/et_CurrentLocation_EditMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_Fullname_EditMode"
+            android:drawableStart="@drawable/ic_location_on_black_24dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/et_about_EditMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_CurrentLocation_EditMode"
+            android:drawableStart="@drawable/ic_info_black_24dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:maxLines="4"
+            android:inputType="textMultiLine"
+            />
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/update_btn"
+            android:textColor="#ffff"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/et_about_EditMode"
+            android:background="@drawable/shape"
+            />
+
+
+
+</RelativeLayout>
