@@ -33,4 +33,10 @@
         android:layout_marginTop="15dp"
         android:background="@drawable/shape"
         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tv_cpp"/>
 </RelativeLayout>

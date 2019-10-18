@@ -21,6 +21,17 @@ android {
             path file('src/main/cpp/CMakeLists.txt')
         }
     }
+    flavorDimensions 'PaidVersion'
+    productFlavors {
+
+        PaidFlavor {
+
+
+
+
+            dimension = 'PaidVersion'
+        }
+    }
 }
 
 dependencies {

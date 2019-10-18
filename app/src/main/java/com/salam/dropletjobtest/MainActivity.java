@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.auth.FirebaseAuth;
@@ -36,7 +37,10 @@ public class MainActivity extends AppCompatActivity {
     FirebaseUser firebaseUser;
     DatabaseReference dbref;
 
-
+    static {
+        System.loadLibrary("native-lib");
+        System.loadLibrary("mathUtility");
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,10 +48,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Objects.requireNonNull(getSupportActionBar()).hide();
+
+
+
         //Initialising declared elements
         Button btn_login = findViewById(R.id.btn_login);
         Button btn_register = findViewById(R.id.btn_register);
         ImageView img_Logo = findViewById(R.id.img_logo);
+        TextView textView = findViewById(R.id.tv_cpp);
+
+        textView.setText(stringFromJNI());
 
         //animations
         img_Logo.startAnimation(AnimationUtils.loadAnimation(this, R.anim.fade_in));
@@ -86,5 +96,8 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
     }
+
+    public native String stringFromJNI();
+
 
 }
