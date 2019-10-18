@@ -41,6 +41,7 @@ public class Register extends AppCompatActivity {
     RelativeLayout busy_layout;
     TextView tv_Please_wait;
 
+
     FirebaseAuth auth;
     DatabaseReference dbref;
     String address_EXTRA;
