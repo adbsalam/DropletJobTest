@@ -1,0 +1,3 @@
+-I have integrated c++ support in this project
+-library inherits from c++ class and displays hello world on main activity.
+-An example of manually setting up NDK and Cmake support.
