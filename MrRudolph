@@ -1,3 +1,5 @@
 -I have integrated c++ support in this project
 -library inherits from c++ class and displays hello world on main activity.
 -An example of manually setting up NDK and Cmake support.
+-I have done this in master branch. 
+-Example of pull request and 2 branches can be seen in NDKTaskTest
